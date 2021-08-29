@@ -4,22 +4,32 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div></div>
+    // header
+      // <Header/>
+      // <Content>
+        // --- HOME ---
+          // <Hero>
+          // <Hero/>
+          // <JobList>
+            // <Job><Job/>
+          // <JobList/>
+        // --- SEARCH JOB ---
+          // <Search>
+            // <SearchOption><SearchOption/>
+            // <JobList>
+              // <Job><Job/>
+            // <JobList/>
+          // <Search/>
+        // *** JOB DETAILS ***
+          // back button <button><button/>
+          // <JobDetails></JobDetails>
+        // --- POST JOB OFFER ---
+          // <JobForm>  
+          // <JobForm/>
+        // --- ABOUT ---
+          // <About/>
+      // <Content/>
   );
 }
 
