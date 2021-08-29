@@ -1,12 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 
 function App() {
   return (
-    <div></div>
+    <div>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            home
+          </Route>
+          <Route exact path="/jobs">
+            offres
+          </Route>
+          <Route exact path="/jobs/:id">
+            JobDetails
+          </Route>
+          <Route path="/add">
+            add
+          </Route>
+          <Route path="/about">
+            about
+          </Route>
+        </Switch>
+      </Router>
+    </div>
     // header
-      // <Header/>
       // <Content>
         // --- HOME ---
           // <Hero>

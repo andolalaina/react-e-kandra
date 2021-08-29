@@ -1,0 +1,21 @@
+.bg-scheme {
+    background-color: #0F0F0F;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.link {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.link:hover {
+    color: #FFF;
+    border-bottom: 1px solid #FFF;
+}
+
+.link.active {
+    font-weight: 700;
+}
