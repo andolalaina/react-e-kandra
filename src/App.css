@@ -9,3 +9,15 @@
 .text-bold {
   font-weight: 700 !important;
 }
+
+svg {
+  width: 50vw;
+  height: 50vh;
+}
+
+@media only screen and (min-width: 768px) {
+  svg {
+    width: 40vw;
+    height: 40vh;
+  }
+}
