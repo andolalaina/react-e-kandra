@@ -1,10 +1,8 @@
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import JobList from './components/JobList';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import SortableFilterableJobList from './components/SortableFilterableJobList';
-
+import FilterableJobList from './components/FilterableJobList';
 
 function App() {
   return (
@@ -14,10 +12,10 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Hero />
-            <JobList />
+            <FilterableJobList />
           </Route>
           <Route exact path="/jobs">
-            <SortableFilterableJobList />
+            <FilterableJobList showFilters />
           </Route>
           <Route exact path="/jobs/:id">
             JobDetails

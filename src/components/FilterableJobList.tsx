@@ -1,10 +1,12 @@
 import { Button, InputGroup, FormControl, Form, Row, Col, Container } from "react-bootstrap";
-import JobList from './JobList';
+import { jobs, title as titles , type as types , method as methods , company as companies   } from "../data/data";
+import { SortableJobList } from "./SortableJobList";
 
-export default function SortableFilterableJobList() {
-    let jobs = [1];
+export default function FilterableJobList(props) {
+    let {showFilters} = props;
     return(
         <div>
+            {showFilters && (
             <Container fluid className="py-5 bg-white">
             <Row>
                 <Col>
@@ -38,12 +40,9 @@ export default function SortableFilterableJobList() {
                                         <InputGroup>
                                             <Form.Select>
                                                 <option>Type de contrat</option>
-                                                <option value="1">CDI</option>
-                                                <option value="2">CDD</option>
-                                                <option value="3">Stage</option>
-                                                <option value="4">Intérim</option>
-                                                <option value="5">Freelance</option>
-                                                <option value="6">Consultance</option>
+                                                {types.map((t) => (
+                                                    <option value={t.id}>{t.name}</option>
+                                                ))}
                                             </Form.Select>
                                         </InputGroup>
                                     </Col>
@@ -51,10 +50,9 @@ export default function SortableFilterableJobList() {
                                         <InputGroup>
                                             <Form.Select>
                                                 <option>Mode de travail</option>
-                                                <option value="1">En Local</option>
-                                                <option value="2">En télétravail</option>
-                                                <option value="3">Mixte</option>
-                                                <option value="4">A discuter</option>
+                                                {methods.map((m) => (
+                                                    <option value={m.id}>{m.name}</option>
+                                                ))}
                                             </Form.Select>
                                         </InputGroup>
                                     </Col>
@@ -65,8 +63,9 @@ export default function SortableFilterableJobList() {
                 </Col>
             </Row>
             </Container>
+            )}
             {jobs.length?(
-                <JobList />
+                <SortableJobList jobs={jobs} titles={titles} types={types} methods={methods} companies={companies}/>
             ):(
                 <Container className="my-5 d-flex justify-content-around">
                     <h3>- Aucun Résultat -</h3>
