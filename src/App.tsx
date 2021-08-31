@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import JobList from './components/JobList';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
@@ -12,6 +13,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Hero />
+            <JobList />
           </Route>
           <Route exact path="/jobs">
             offres
