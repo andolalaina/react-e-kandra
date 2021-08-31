@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import JobList from './components/JobList';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import SortableFilterableJobList from './components/SortableFilterableJobList';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
             <JobList />
           </Route>
           <Route exact path="/jobs">
-            offres
+            <SortableFilterableJobList />
           </Route>
           <Route exact path="/jobs/:id">
             JobDetails
