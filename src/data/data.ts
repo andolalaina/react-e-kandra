@@ -1,3 +1,4 @@
+
 export const jobs = [
     {
         id: 1,
@@ -18,7 +19,7 @@ export const jobs = [
         deadline: "08/25/2021"
     },
     {
-        id: 1,
+        id: 2,
         title: 1,
         description: `Design your full-time freelance career as a developer with Toptal.
 
@@ -36,7 +37,7 @@ export const jobs = [
         deadline: "05/19/2021"
     },
     {
-        id: 1,
+        id: 3,
         title: 1,
         description: `Design your full-time freelance career as a developer with Toptal.
 
